@@ -1,7 +1,5 @@
-let numbs = [];
-// let a=1;
-// for(let i = 0;a!=0;i++){
-// a = prompt("Enter a value to add in array : "); 
-// numbs.push(a);
-// }
-// console.log(numbs);
+let word2 = ["a", "b", "c"];
+let newWord2 = word2.map((Element) => {
+    return Element.toUpperCase();
+}).join("");
+console.log(newWord2);

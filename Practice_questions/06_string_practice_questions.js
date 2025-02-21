@@ -4,8 +4,8 @@ console.log(str1.slice(-4));
 // Write a function to count the number of vowels in a given string.
 const vowel = (name) => {
     let no_of_vowel = 0;
-    for(let i=0;i<name.length;i++) {
-        if("aeiou".includes(name[i].toLowerCase())) {
+    for (let i = 0; i < name.length; i++) {
+        if ("aeiou".includes(name[i].toLowerCase())) {
             no_of_vowel++;
         }
     }
