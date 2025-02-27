@@ -1,0 +1,13 @@
+#Heading4 {
+    color: brown;
+}
+
+.Heading5 {
+    color: rgb(146, 127, 255);
+}
+
+button {
+    background-color: rgb(255, 157, 0);
+    height: 20px;
+    width: 80px;
+}
