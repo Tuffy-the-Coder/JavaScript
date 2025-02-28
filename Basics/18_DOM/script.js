@@ -45,3 +45,21 @@ console.log(f.innerText);
 let g = document.querySelector("#anime");
 g.innerHTML = "<b>" + g.innerHTML + "</b>";
 console.log(g.innerHTML);
+
+// getAttribute()
+
+let h = document.querySelector("#google");
+console.log(h.getAttribute("href"));
+
+// setAttribute()
+
+h.setAttribute("href", "www.github.com");
+console.log(h.getAttribute("href"));
+console.log(h);
+
+// style
+
+let div3 = document.querySelector("#div3");
+div3.style.backgroundColor = "green";
+div3.style.width = "120px";
+div3.style.height = "120px";
