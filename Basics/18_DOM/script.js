@@ -61,5 +61,27 @@ console.log(h);
 
 let div3 = document.querySelector("#div3");
 div3.style.backgroundColor = "green";
-div3.style.width = "120px";
+div3.style.width = "150px";
 div3.style.height = "120px";
+
+// insert element
+
+let newText1 = document.createElement("p");
+newText1.innerText = "append";
+let div4 = document.querySelector("#div4");
+div4.append(newText1);  // adds at the end of node (inside)
+let newText2 = document.createElement("p");
+newText2.innerText = "prepend";
+div4.prepend(newText2); //adds at the start of node (inside)
+let newText3 = document.createElement("p");
+newText3.innerText = "before";
+div4.before(newText3); //adds before the node (outside)
+let newText4 = document.createElement("p");
+newText4.innerText = "after";
+div4.after(newText4); //adds after the node (outside)
+
+
+// delete element
+
+let div5 = document.querySelector("#div5")
+div5.remove();
