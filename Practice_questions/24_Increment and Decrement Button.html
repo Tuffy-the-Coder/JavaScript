@@ -1,0 +1,40 @@
+<!-- Create a counter with a "+" and "-" button to increase or decrease the number displayed. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 100px;
+            text-align: center;
+        }
+
+        button {
+            text-align: center;
+            display: flex;
+            justify-self: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p> 0 </p>
+    <button class="decrease" onclick="decrease()">Decrement</button>
+    <button class="increase" onclick="increase()">Increment</button>
+    <script>
+        const increase = () => {
+            let value = Number(document.querySelector("p").innerText);
+            document.querySelector("p").innerText = value + 1;
+        }
+        const decrease = () => {
+            let value = Number(document.querySelector("p").innerText);
+            document.querySelector("p").innerText = value - 1;
+        }
+    </script>
+</body>
+
+</html>

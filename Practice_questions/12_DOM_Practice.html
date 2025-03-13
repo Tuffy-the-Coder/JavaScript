@@ -13,13 +13,33 @@ Solve this problem using classList.-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .para {
+            color: rgb(255, 141, 41);
+            margin: 4px;
+        }
+
+        .newPara {
+            background-color: aquamarine;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Hello World</h1>
     <p class="para">This is a paragraph.</p>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        let button = document.createElement("button");
+        button.innerText = "Click me!"
+        button.style.backgroundColor = "red";
+        button.style.color = "white";
+        document.querySelector("body").prepend(button);
+
+        document.querySelector(".para").classList.add("newPara");
+    </script>
 </body>
 
 </html>
