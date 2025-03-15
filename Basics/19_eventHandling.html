@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="alert('Clicked')">btn1</button> <!-- using HTML attribute -->
+    <button id="btn2">btn2</button> <!-- using js -->
+    <button id="btn3">btn3</button> <!-- addEventListener -->
+    <button id="btn4">btn4</button> <!-- removeEventListener -->
+    <button id="btn5">btn5</button> <!-- event object -->
+    <script>
+        document.querySelector("#btn2").onclick = () => {
+            alert("button 2 is clicked");
+        };
+        document.querySelector("#btn3").addEventListener("click", function () {
+            alert("button 3 is clicked");
+        })
+        function a() {
+            alert("button 4 is clicked");
+        };
+        document.querySelector("#btn4").addEventListener("click", a);
+        document.querySelector("#btn4").removeEventListener("click", a);
+        document.querySelector("#btn5").addEventListener("click", function (event) {
+            console.log(event.type);
+            console.log(event.target);
+            console.log(event.clientX + " " + event.clientY);
+        });
+    </script>
+</body>
+
+</html>
