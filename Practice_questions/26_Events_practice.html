@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Q1. Show alert for the clicked button -->
+
+
+    <!-- <button id="btn1">button 1</button>
+    <button id="btn2">button 2</button>
+    <button id="btn3">button 3</button>
+<script>
+    let alt = function(id) {
+        alert(`${id} is clicked`)
+    }
+    document.getElementById("btn1").addEventListener("click",function() {
+        alt(document.getElementById("btn1").innerText);
+    });
+    document.getElementById("btn2").addEventListener("click",function() {
+        alt(document.getElementById("btn2").innerText);
+    });
+    document.getElementById("btn3").addEventListener("click",function() {
+        alt(document.getElementById("btn3").innerText);
+    });
+</script> -->
+
+
+    <!-- Q2. Store Bookmarks for some websites -->
+    <!-- <h3>Bookmarks</h3>
+    <a href="https://google.com"><button>Google</button></a>
+    <button onclick="window.location = 'https://www.Facebook.com'">Facebook</button>
+    <button id="chess">Chess</button> <!-- by eventlistener-->
+    <!-- <script>
+    document.getElementById("chess").addEventListener("click",function() {
+        window.location = "https://www.chess.com";
+    });
+</script> -->
+
+    <!-- Q3. Create a button that removes itself when clicked. -->
+
+    <button id="magic-button">Click me!</button>
+    <script>
+        document.querySelector("#magic-button").addEventListener("click", function () {
+            this.remove(); // this refers to the button itself
+        });
+
+    </script>
+</body>
+
+</html>
