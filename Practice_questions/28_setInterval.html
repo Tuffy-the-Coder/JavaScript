@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        button {
+            height: 35px;
+            width: 60px;
+        }
+
+        div {
+            text-align: center;
+            align-content: center;
+            align-items: center;
+            margin: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Do You Wanna See The Most Beautiful Thing In The Entire Fucking Universe ?</h2>
+    <div>
+        <button id="Yes">Yes</button>
+        <button id="No">No</button>
+    </div>
+    <script>
+        document.getElementById("Yes").addEventListener("click", function () {
+            let count = 5;
+            let surp = setInterval(function () {
+                let a = document.querySelector("body");
+                a.style.fontSize = "170px";
+                a.innerText = count;
+                if (count < 1) {
+                    clearInterval(surp);
+                    a.innerHTML = `<video width="600" autoplay>
+                            <source src="0319.mp4" type="video/mp4">
+                            </video>`
+                }
+                count--;
+            }, 1000);
+
+        })
+        document.getElementById("No").addEventListener("click", function () {
+            document.querySelector("body").style.fontSize = "150px";
+            document.querySelector("body").innerText = "Fuck You!!"
+        })
+    </script>
+</body>
+
+</html>
