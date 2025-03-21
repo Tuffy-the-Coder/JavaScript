@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let promise = new Promise((resolve,reject) => {
+        //     console.log("processing...");
+        //     setTimeout(()=> {
+        //         console.log("Complete.")
+        //         let condition = 1;
+        //         if(condition) {
+        //         resolve("sucess");
+        //         }
+        //         else{
+        //         reject("failed");
+        //         }
+
+        //     },7000)
+
+        // })
+
+
+        // .then() & .catch()
+
+        let myPromise = new Promise((resolve, reject) => {
+            console.log("Fetching data...");
+            let result = 0;
+            if (result) {
+                resolve("sucess");
+            } else {
+                reject("failure");
+            }
+        })
+        myPromise.then((res) => {
+            console.log("Data received.");
+        })
+        myPromise.catch((err) => {
+            console.log("Unexpected error!");
+        })
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
