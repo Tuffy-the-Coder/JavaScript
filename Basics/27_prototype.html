@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let employee = {
+            name : "Tuffy",
+            salary : 50000,
+            tax : function () {
+                console.log("Tax reduction is 10%");
+            }
+        }
+        let e1 = {
+            name : "Tommy",
+            salary : 65000,
+            tax() { 
+                console.log("Tax reduction is 15%");// another way of writing function in obj
+            }
+        }
+        // console.log(e1.tax());
+        let e2 = {
+            name : "Oscar",
+            salary : 70000,
+        }
+        e2.__proto__ = employee; // setting prototype
+        // console.log(e2.tax());
+        let e3 = {
+            name : "shimy",
+            salary : 35000,
+            tax() {
+                console.log("Tax reduction is 50%");
+            }
+        }
+        e3.__proto__ = employee; // object method is available so it will be used
+        // console.log(e3.tax());
+
+        // Prototype Chain
+
+        let proto1 = {
+            name : "Haruki"
+        }
+        let proto2 = {
+
+        }
+        proto2.__proto__ = proto1;
+        let proto3 = {
+
+        }
+        proto3.__proto__ = proto2;
+        console.log(proto3.name);
+    </script>
+</body>
+</html>
