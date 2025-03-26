@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // // classes
+
+        // class cars {
+        //     start() {
+        //         console.log("Start");
+        //     }
+        //     setBrand(name) {
+        //         this.brandName = name;
+        //     }
+        //     stop() {
+        //         console.log("STOP")
+        //     }
+        // }
+
+        // let fortuner = new cars;
+        // fortuner.setBrand("FORTUNER");
+        // let lexus = new cars;
+        // lexus.setBrand("LEXUS");
+
+        // constructor
+
+        // class students {
+        //     constructor(name, age) {
+        //         console.log("Adding new student");
+        //         this.studentName = name;
+        //         this.studentAge = age;
+        //     }
+        // }
+        // let student_01 = new students("Mohit", 20);
+
+
+        // // inheritance
+
+        // class person {
+        //     constructor() {
+        //         this.species = "homo sapiens"
+        //     }
+        //     eat() {
+        //         console.log("eat");
+        //     }
+
+        //     sleep() {
+        //         console.log("sleep");
+        //     }
+        //     work() {
+        //         console.log("Do nothing")
+        //     }
+        // }
+
+        // class doctor extends person {
+        //     work() {
+        //         console.log("Identifies and cure diseases");
+        //     }
+        // }
+
+        // let doctorJhatka = new doctor;
+        // let doctorSaduke = new doctor;
+
+        // // super
+
+        class animal {
+            constructor(name) {
+                this.animalName = name;
+            }
+            loudAnimal() {
+                console.log("He is very noisy");
+            }
+            quietAnimal() {
+                console.log("He is usually very quiet")
+            }
+
+        }
+
+        class dog extends animal {
+            constructor(name) {
+                super(name);
+                console.log(`${name} is a dog`);
+            }
+            voice() {
+                super.loudAnimal();
+            }
+        }
+
+        class cat extends animal {
+            constructor(name) {
+                super(name);
+                console.log(`${name} is a cat`)
+            }
+            voice() {
+                super.quietAnimal();
+            }
+        }
+        let Oscar = new dog("Oscar");
+        Oscar.voice();
+        let Taro = new cat("Taro");
+        Taro.voice();
+
+    </script>
+</body>
+
+</html>
