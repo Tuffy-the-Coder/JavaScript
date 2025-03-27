@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a BankAccount class with:
+        // Private property #balance
+        // Methods: deposit(amount), withdraw(amount), getBalance()
+        // Prevent withdrawal if balance is insufficient.
+
+        class BankAccount {
+            constructor(balance) {
+                this.balance = balance;
+            }
+            deposit(amount) {
+                this.balance += amount;
+                console.log(`Deposited ${amount}, new balance ${this.balance}`);
+            }
+            withdraw(amount) {
+                if (amount > this.balance) {
+                    console.log("Insufficent balance.");
+                } else {
+                    this.balance -= amount;
+                    console.log(`Withdrawed ${amount}, new balance ${this.balance}`);
+                }
+            }
+            getBalance() {
+                console.log(this.balance);
+            }
+        }
+        let acc = new BankAccount(100);
+        acc.withdraw(50);
+
+    </script>
+</body>
+
+</html>

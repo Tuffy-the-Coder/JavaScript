@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Create a Book class with the following properties and methods:
+        // Properties: title, author, yearPublished
+        // Method: getSummary() → Returns a string like "Title by Author (Year)"
+
+        class Book {
+            constructor(title, author, yearPublished) {
+                this.title = title;
+                this.author = author;
+                this.yearPublished = yearPublished;
+            }
+            getSummary() {
+                console.log(`${this.title} by ${this.author} (${this.yearPublished})`);
+            }
+        }
+        let book01 = new Book("Harry Potter", "J.K Rowling", 1997);
+        console.log(book01.getSummary());
+        let book2 = new Book("Ice and Fire", "George R.R Martin", 1991);
+        console.log(book2.getSummary());
+
+
+    </script>
+</body>
+
+</html>
