@@ -14,10 +14,10 @@ for (let select of dropdownSelect) {
         select.append(newOption);
     }
     select.addEventListener("change", (evt) => {
-        flagChng(evt.target);
+        flagChange(evt.target);
     });
 }
-const flagChng = (element) => {
+const flagChange = (element) => {
     let curr = element.value;
     let countryCode = countryList[curr];
     let newImg = `https://flagsapi.com/${countryCode}/shiny/64.png`
@@ -39,7 +39,7 @@ const conversion = async () => {
     let toRate = data.data[toCurr.value];
     document.querySelector(".output").innerText = (fromRate * toRate).toFixed(3);
 }
-document.querySelector(".convert").addEventListener("click", async (evt) => {
+document.querySelector(".convert").addEventListener("click", (evt) => {
     evt.preventDefault();
     conversion();
 });
