@@ -7,16 +7,14 @@
 
 </head>
 <body>
-    <button class="sound">Click me</button>
+    <button onclick="playSound()">Play audio</button>
+    <button onclick="stopSound()">stop audio</button>
     <script>
-        function play() {
-            var audio = new Audio('https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3');
+        function playSound() {
+            const audio = new Audio();
+            audio.src= "./resources/audio.mp3"
             audio.play();
         }
-        document.querySelector(".sound").addEventListener("click", ()=> {
-            play(); 
-        })
-
     </script>
 </body>
 </html>
