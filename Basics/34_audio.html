@@ -8,12 +8,15 @@
 </head>
 <body>
     <button onclick="playSound()">Play audio</button>
-    <button onclick="stopSound()">stop audio</button>
+    <button onclick="pauseSound()">Pause audio</button>
     <script>
-        function playSound() {
-            const audio = new Audio();
-            audio.src= "./resources/audio.mp3"
+        const audio = new Audio();
+        audio.src= "./resources/audio.mp3"
+        function playSound() {  
             audio.play();
+        }
+        function  pauseSound(){
+            audio.pause();
         }
     </script>
 </body>
