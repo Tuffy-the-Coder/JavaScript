@@ -7,14 +7,16 @@
 </head>
 <body>
     <script>
-        let url = "https://catfact.ninja/fact";
-        const getFacts = async () => {
-        let response = await fetch(url);
-        let data = await response.json();
-        console.log(data);
-        console.log(data.fact);
-        }
-        
+        let url = "https://goweather.xyz/weather/Dehradun";
+        // let url = "https://goweather.xz/weather/Dehradun"; dummy API to check catch
+        let weather = fetch(url);
+        weather.then((response) => {
+            return response.json();
+        }).then((response) => {
+            console.log("Description:", response.description);
+        }).catch((err) => {
+            console.error("fetch error");
+        })
     </script>
 </body>
 </html>

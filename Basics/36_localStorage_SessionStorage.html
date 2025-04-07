@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local-Session Storage</title>
+</head>
+<body>
+    Hello World
+    <script>
+        // local storage
+
+        localStorage.setItem("name01","Jamie");
+        localStorage.setItem("name02","Briane");
+        // console.log(localStorage.getItem("name01"));
+        localStorage.removeItem("name02");
+        localStorage.setItem("name03","Rob");
+        localStorage.setItem("name04","Brain");
+        // console.log(localStorage);
+        localStorage.clear();
+        // console.log(localStorage.getItem("name01")); // null
+        localStorage.setItem("name05","Ned");
+        
+
+        // session storage
+
+        sessionStorage.setItem("House01","Stark");
+        sessionStorage.setItem("House02","Tully");
+        sessionStorage.removeItem("House01");
+        // console.log(sessionStorage.getItem("House02"));
+    </script>
+</body>
+</html>
