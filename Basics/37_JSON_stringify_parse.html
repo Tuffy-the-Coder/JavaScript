@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON stringify parse</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            {text:"hello1"},
+            {text:"hello2"},
+            {text:"hello3"},
+            {text:"hello4"},
+            {text:"hello4"}
+        ]
+        localStorage.setItem("arr",JSON.stringify(arr));
+        console.log(JSON.parse(localStorage.getItem("arr")));
+    </script>
+</body>
+</html>
